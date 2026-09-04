@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wostup/ui/add_contact_form.dart';
+import 'package:wostup/ui/elements/contact_item.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -37,8 +38,9 @@ class HomePage extends StatelessWidget {
         color: Colors.green,
         child: ListView.builder(
           itemBuilder: (context, index) {
-            return const ListTile(
-              title: Text('test'),
+            return const ContactItem(
+              name: 'name',
+              number: '3484537786',
             );
           },
         ),

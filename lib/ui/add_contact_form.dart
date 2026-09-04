@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wostup/ui/input/dialog_text_input_field.dart';
 
 class AddContactForm extends StatelessWidget {
   const AddContactForm({super.key});
@@ -15,6 +16,7 @@ class AddContactForm extends StatelessWidget {
             color: Colors.red,
           ),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
             Text(
               style: TextStyle(
@@ -23,6 +25,22 @@ class AddContactForm extends StatelessWidget {
               ),
               "Aggiungi contatto",
             ),
+            DialogTextInputField(
+              label: 'Nome',
+            ),
+            DialogTextInputField(
+              label: 'Numero di telefono',
+              numeric: true,
+            ),
+            Container(
+              margin: EdgeInsets.all(10),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text('Aggiungi'),
+              ),
+            )
           ],
         ),
       ),
