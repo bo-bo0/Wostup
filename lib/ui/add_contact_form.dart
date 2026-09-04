@@ -12,14 +12,16 @@ class AddContactForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double inputFieldsMargin = 20;
     return Dialog(
       child: DecoratedBox(
           decoration: BoxDecoration(
             border: Border.all(
-              color: Colors.red,
+              color: Colors.black26,
+              width: 5,
             ),
             borderRadius: BorderRadius.circular(20),
-            color: Colors.red,
+            color: Colors.lightGreenAccent,
           ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -31,14 +33,20 @@ class AddContactForm extends StatelessWidget {
               ),
               "Aggiungi contatto",
             ),
-            DialogTextInputField(
-              label: 'Nome',
-              textController: nameController,
+            Container(
+              margin: EdgeInsets.all(inputFieldsMargin),
+              child: DialogTextInputField(
+                label: 'Nome',
+                textController: nameController,
+              ),
             ),
-            DialogTextInputField(
-              label: 'Numero di telefono',
-              numeric: true,
-              textController: numberController,
+            Container(
+              margin: EdgeInsets.all(inputFieldsMargin),
+              child: DialogTextInputField(
+                label: 'Numero di telefono',
+                numeric: true,
+                textController: numberController,
+              ),
             ),
             Container(
               margin: EdgeInsets.all(10),
