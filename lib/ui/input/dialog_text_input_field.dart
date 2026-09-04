@@ -6,20 +6,23 @@ class DialogTextInputField extends StatelessWidget {
     super.key,
     required this.label,
     this.numeric,
+    this.textController,
   });
 
   final String label;
   final bool? numeric;
+  final TextEditingController? textController;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: textController,
       keyboardType: numeric == true ? TextInputType.number : null,
       inputFormatters: numeric == true ? <TextInputFormatter>[
         FilteringTextInputFormatter.digitsOnly,
       ] : null,
       decoration: InputDecoration(
-          label: Text(label),
+        label: Text(label),
       ),
 
     );
