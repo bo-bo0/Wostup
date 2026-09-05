@@ -17,10 +17,11 @@ class ContactList extends StatelessWidget {
             return ContactItem(
               name: items[index].name,
               number: items[index].number,
+              messageCount: items[index].messageCount,
             );
           },
         );
-      }
+      },
     );
   }
 }

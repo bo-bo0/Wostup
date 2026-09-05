@@ -8,8 +8,19 @@ final class ContactsInfoManager {
   static void registerContact(String name, String number) {
     ContactsInfoData.data.add(ContactInfo(
         name: name,
-        number: number
+        number: number,
+        messageCount: 0
     ));
+
+    notifier.value++;
+  }
+
+  static void incrementContactMessageCount(String number) {
+    ContactsInfoData.data.forEach(((contact) {
+      if (contact.number == number) {
+        contact.messageCount++;
+      }
+    }));
 
     notifier.value++;
   }
