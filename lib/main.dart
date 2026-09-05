@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:wostup/ui/home_page.dart';
 import 'package:wostup/ui/user_registration_page.dart';
+
+import 'data/user/user_info.dart';
 
 void main() {
   runApp(const WostupApp());

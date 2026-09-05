@@ -3,6 +3,8 @@ import 'package:wostup/ui/home_page.dart';
 import 'package:wostup/ui/input/dialog_text_input_field.dart';
 import 'package:wostup/utils/user/user_data_manager.dart';
 
+import '../utils/navigation/navigation_route_factory.dart';
+
 class RegisterUserForm extends StatelessWidget {
   RegisterUserForm({super.key});
 
@@ -37,9 +39,7 @@ class RegisterUserForm extends StatelessWidget {
                     Navigator.pop(context);
                     Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(
-                            builder: (_) => HomePage()
-                        )
+                        NavigationRouteFactory.of(HomePage.new)
                     );
                   },
                   child: Text('Fatto')

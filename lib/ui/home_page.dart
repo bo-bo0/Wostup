@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:wostup/network/messages/message_fetcher.dart';
+import 'package:wostup/network/messages/message_poster.dart';
 import 'package:wostup/ui/add_contact_form.dart';
 import 'package:wostup/ui/elements/contact_list.dart';
+import 'package:wostup/utils/contacts/contacts_updater.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -20,6 +23,7 @@ class HomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
+          ContactsUpdater.receive(MessageFetcher.fetchFor("3484537786"));
           showDialog(
             context: context,
             builder: (context) {
