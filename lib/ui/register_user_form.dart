@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wostup/ui/home_page.dart';
-import 'package:wostup/ui/input/dialog_text_input_field.dart';
+import 'package:wostup/ui/elements/input/dialog_text_input_field.dart';
 import 'package:wostup/utils/user/user_data_manager.dart';
 
 import '../utils/navigation/navigation_route_factory.dart';

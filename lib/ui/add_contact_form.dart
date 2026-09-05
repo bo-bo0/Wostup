@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wostup/ui/input/dialog_text_input_field.dart';
+import 'package:wostup/ui/elements/input/dialog_text_input_field.dart';
 import 'package:wostup/utils/contacts/contacts_info_manager.dart';
 
 class AddContactForm extends StatelessWidget {

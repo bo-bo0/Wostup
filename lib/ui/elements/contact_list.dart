@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:wostup/ui/elements/contact_item.dart';
 import 'package:wostup/utils/contacts/contacts_info_manager.dart';
 
@@ -14,10 +15,16 @@ class ContactList extends StatelessWidget {
         return ListView.builder(
           itemCount: items.length,
           itemBuilder: (context, index) {
-            return ContactItem(
-              name: items[index].name,
-              number: items[index].number,
-              messageCount: items[index].messageCount,
+            return Container(
+              decoration: BoxDecoration(
+                border: Border.all(),
+                color: Colors.black12,
+              ),
+              child: ContactItem(
+                name: items[index].name,
+                number: items[index].number,
+                messageCount: items[index].messageCount,
+              ),
             );
           },
         );
