@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:wostup/ui/chat_page.dart';
 import 'package:wostup/utils/navigation/navigation_route_factory.dart';
 
-import '../../data/user/user_info.dart';
-
 class ContactItem extends StatelessWidget {
   const ContactItem({
     super.key,
