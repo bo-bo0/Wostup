@@ -17,6 +17,9 @@ class ChatMessageListItem extends StatelessWidget {
       title: UnconstrainedBox(
         alignment: owner == ChatMessageOwner.sender ? Alignment.centerLeft : Alignment.centerRight,
         child: Container(
+          constraints: BoxConstraints(
+            maxWidth: MediaQuery.sizeOf(context).width * 0.6
+          ),
           padding: EdgeInsets.all(5),
           decoration: BoxDecoration(
             color: owner == ChatMessageOwner.sender ? Colors.amberAccent : Colors.lime,
@@ -26,7 +29,7 @@ class ChatMessageListItem extends StatelessWidget {
           child: Text(
               content,
               style: TextStyle(
-                fontSize: 25,
+                fontSize: 18,
               )
           ),
         ),
