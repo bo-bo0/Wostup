@@ -10,14 +10,6 @@ class UserRegistrationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-          child: Text('RIMUOVIMI'),
-          onPressed: () {
-            Navigator.pushReplacement(
-                context,
-                NavigationRouteFactory.of(HomePage.new)
-            );
-          }),
       appBar: AppBar(
         backgroundColor: Colors.cyan,
         title: Center(
