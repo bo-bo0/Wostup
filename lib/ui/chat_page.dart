@@ -8,14 +8,18 @@ class ChatPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomInputBar(),
       appBar: AppBar(
         title: Text('Chatta su Wostup'),
         backgroundColor: Colors.greenAccent,
       ),
       body: Container(
         color: Colors.green,
-        child: ChatMessageList(),
+        child: Column(
+          children: [
+            Expanded(child: ChatMessageList()),
+            BottomInputBar()
+          ],
+        ),
       ),
     );
   }
