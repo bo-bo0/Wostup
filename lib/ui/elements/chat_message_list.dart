@@ -14,11 +14,13 @@ class ChatMessageList extends StatelessWidget {
         listenable: ChatMessagesRegistry.notifier,
         builder: (context, child) {
           return ListView.builder(
+              reverse: true,
               itemCount: items.length,
               itemBuilder: (context, index) {
+                int reverseIndex = items.length - index - 1;
                 return ChatMessageListItem(
-                    content: items[index].content,
-                    owner: items[index].owner
+                    content: items[reverseIndex].content,
+                    owner: items[reverseIndex].owner
                 );
               }
           );
