@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wostup/ui/elements/chat_message_list.dart';
 import 'package:wostup/ui/elements/input/bottom_input_bar.dart';
 
 class ChatPage extends StatelessWidget {
@@ -14,6 +15,7 @@ class ChatPage extends StatelessWidget {
       ),
       body: Container(
         color: Colors.green,
+        child: ChatMessageList(),
       ),
     );
   }

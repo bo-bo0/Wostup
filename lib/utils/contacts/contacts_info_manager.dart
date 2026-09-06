@@ -25,6 +25,16 @@ final class ContactsInfoManager {
     notifier.value++;
   }
 
+  static void resetContactMessageCount(String number) {
+    ContactsInfoData.data.forEach(((contact) {
+      if (contact.number == number) {
+        contact.messageCount = 0;
+      }
+    }));
+
+    notifier.value++;
+  }
+
   static List<ContactInfo> getContacts() {
     return ContactsInfoData.data;
   }

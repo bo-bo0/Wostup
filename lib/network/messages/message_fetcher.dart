@@ -2,7 +2,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:wostup/network/network_data.dart';
 
-class MessageFetcher {
+final class MessageFetcher {
   static Future<List<dynamic>> fetchFor(String number) async {
     final url = Uri.parse('${NetworkData.serverURL}/messages/$number');
     try {
