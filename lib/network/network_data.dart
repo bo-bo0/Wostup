@@ -1,3 +1,3 @@
 final class NetworkData {
-  static String serverURL = 'https://localhost:7295';
+  static String serverURL = 'https://a61051-2a6f.d.onjrnm.link';
 }

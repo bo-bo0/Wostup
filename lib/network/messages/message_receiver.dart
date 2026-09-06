@@ -19,6 +19,9 @@ final class MessageReceiver {
   }
 
   static void _tick() {
+    if (UserInfo.info == null) {
+      return;
+    }
     ContactsUpdater.receive(MessageFetcher.fetchFor(UserInfo.info!.number));
   }
 }
