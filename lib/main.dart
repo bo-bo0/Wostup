@@ -12,6 +12,7 @@ class WostupApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    UserInfo.info = UserInfo(name: 'bo bo', number: '3484537786');
     return const MaterialApp(
       home: UserRegistrationPage(),
     );

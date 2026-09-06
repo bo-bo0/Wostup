@@ -13,6 +13,6 @@ final class ChatMessagesRegistry {
   }
 
   static List<ChatMessage> getMessagesOf(String chatNumber) {
-    return _chats[chatNumber] ?? List.empty();
+    return _chats[chatNumber] ?? _chats.putIfAbsent(chatNumber, () => []);
   }
 }
