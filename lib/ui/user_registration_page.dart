@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wostup/ui/register_user_form.dart';
+import 'package:wostup/ui/dialogs/register_user_form.dart';
 
 import '../utils/navigation/navigation_route_factory.dart';
 import 'home_page.dart';
