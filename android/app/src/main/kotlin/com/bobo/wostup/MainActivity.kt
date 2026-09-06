@@ -1,4 +1,4 @@
-package com.example.wostup
+package com.bobo.wostup
 
 import io.flutter.embedding.android.FlutterActivity
 
