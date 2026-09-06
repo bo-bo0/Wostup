@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:wostup/ui/home_page.dart';
 import 'package:wostup/ui/user_registration_page.dart';
 import 'package:wostup/utils/contacts/contacts_info_manager.dart';
-import 'package:wostup/utils/files/contacts_data_file_manager.dart';
+import 'package:wostup/utils/files/save_files_helper.dart';
 import 'package:wostup/utils/files/structures/contacts/contact_structure.dart';
-import 'package:wostup/utils/files/user_data_file_manager.dart';
 import 'package:wostup/utils/user/user_data_manager.dart';
 
 Widget? _initialPage;
@@ -15,7 +14,7 @@ void main() async {
 }
 
 Future<void> _initialDataRead() async {
-  var userInfoMap = await UserDataFileManager.readJson();
+  var userInfoMap = await SaveFilesHelper.readJson(SaveFile.user);
   if (userInfoMap == null) {
     _initialPage = UserRegistrationPage();
   }
@@ -24,9 +23,9 @@ Future<void> _initialDataRead() async {
     _initialPage = HomePage();
   }
 
-  var contactsData = await ContactsDataFileManager.readJson();
+  var contactsData = await SaveFilesHelper.readJson(SaveFile.contacts);
 
-  if (contactsData != null)  {
+  if (contactsData != null) {
     Map<String, dynamic> contactsMap = contactsData['contacts'];
     List<dynamic> contactsDynamic = contactsMap['contacts'];
     List<ContactStructure> contacts = [];

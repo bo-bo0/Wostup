@@ -1,10 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:wostup/data/contacts/contact_info.dart';
 import 'package:wostup/data/contacts/contacts_info_data.dart';
+import 'package:wostup/utils/files/save_files_helper.dart';
 import 'package:wostup/utils/files/structures/contacts/contact_list_structure.dart';
 import 'package:wostup/utils/files/structures/contacts/contact_structure.dart';
-
-import '../files/contacts_data_file_manager.dart';
 
 final class ContactsInfoManager {
   static ValueNotifier<int> notifier = ValueNotifier(0);
@@ -18,9 +17,11 @@ final class ContactsInfoManager {
     );
 
     if (saveLocally) {
-      await ContactsDataFileManager.writeJson({
-        "contacts": ContactListStructure.data
-      });
+      await SaveFilesHelper.writeJson(
+        {
+          "contacts": ContactListStructure.data
+        },
+        SaveFile.contacts);
     }
 
     ContactsInfoData.data.add(ContactInfo(
