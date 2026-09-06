@@ -1,3 +1,6 @@
+import 'package:wostup/data/messages/chat_message.dart';
+import 'package:wostup/data/messages/chat_message_owner.dart';
+import 'package:wostup/data/messages/chat_messages_registry.dart';
 import 'package:wostup/utils/contacts/contacts_info_manager.dart';
 
 final class ContactsUpdater {
@@ -22,6 +25,14 @@ final class ContactsUpdater {
         );
         ContactsInfoManager.incrementContactMessageCount(number);
       }
+
+      ChatMessagesRegistry.addMessageToChat(
+        number,
+        ChatMessage(
+            content: message['content'],
+            owner: ChatMessageOwner.sender
+        )
+      );
     }
   }
 }

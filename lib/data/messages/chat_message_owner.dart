@@ -1,0 +1,4 @@
+enum ChatMessageOwner {
+  user,
+  sender
+}
