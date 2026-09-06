@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:wostup/data/messages/chat_messages_registry.dart';
-import 'package:wostup/network/messages/message_fetcher.dart';
-import 'package:wostup/network/messages/message_poster.dart';
 import 'package:wostup/ui/dialogs/add_contact_form.dart';
 import 'package:wostup/ui/elements/contact_list.dart';
-import 'package:wostup/utils/contacts/contacts_info_manager.dart';
-import 'package:wostup/utils/contacts/contacts_updater.dart';
+import 'package:wostup/network/messages/message_receiver.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    MessageReceiver.startListening();
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -25,7 +22,6 @@ class HomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          ContactsUpdater.receive(MessageFetcher.fetchFor("3484537786"));
           showDialog(
             context: context,
             builder: (context) {

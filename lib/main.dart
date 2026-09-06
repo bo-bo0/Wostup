@@ -14,6 +14,7 @@ import 'package:wostup/utils/user/user_data_manager.dart';
 
 Widget? _initialPage;
 
+
 void main() async {
   await _initialDataRead();
   runApp(const WostupApp());
