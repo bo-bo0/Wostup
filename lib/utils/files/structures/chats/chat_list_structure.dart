@@ -5,6 +5,15 @@ final class ChatListStructure {
 
   static final data = ChatListStructure();
 
+  static void replaceChat(String chatNumber, ChatStructure newChat) {
+    for (int i = 0; i < data.chats.length; i++) {
+      if (data.chats[i].number == chatNumber) {
+        data.chats[i] = newChat;
+        break;
+      }
+    }
+  }
+
   Map<String, dynamic> toJson() {
     return {
       "chats": chats

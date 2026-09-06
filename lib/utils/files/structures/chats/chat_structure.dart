@@ -12,4 +12,10 @@ final class ChatStructure {
       "messages": messages.map((message) => message.toJson()).toList()
     };
   }
+
+  @override
+  String toString() {
+
+    return "$number | $messages";
+  }
 }

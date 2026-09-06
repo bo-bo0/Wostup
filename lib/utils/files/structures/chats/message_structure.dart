@@ -12,4 +12,9 @@ final class MessageStructure {
       "owner": owner == ChatMessageOwner.user ? "user" : "sender"
     };
   }
+
+  @override
+  String toString() {
+    return "$content | $owner";
+  }
 }

@@ -27,7 +27,9 @@ final class SaveFilesHelper {
   static Future<File> writeJson(Map<String, dynamic> data, SaveFile fileType) async {
     final file = await _getLocalFile(fileType);
 
-    String jsonString = jsonEncode(data);
+    var encoder = const JsonEncoder.withIndent('  ');
+
+    String jsonString = encoder.convert(data);
 
     return await file.writeAsString(jsonString);
   }
