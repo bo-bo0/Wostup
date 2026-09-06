@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:wostup/data/messages/chat_messages_registry.dart';
+import 'package:wostup/ui/elements/chat_message_list_item.dart';
 
 class ChatMessageList extends StatelessWidget {
   const ChatMessageList({super.key});
@@ -15,7 +16,10 @@ class ChatMessageList extends StatelessWidget {
           return ListView.builder(
               itemCount: items.length,
               itemBuilder: (context, index) {
-                return Text(items[index].content);
+                return ChatMessageListItem(
+                    content: items[index].content,
+                    owner: items[index].owner
+                );
               }
           );
         }
