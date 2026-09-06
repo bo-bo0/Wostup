@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wostup/data/messages/chat_messages_registry.dart';
 import 'package:wostup/ui/chat_page.dart';
+import 'package:wostup/utils/files/structures/chats/chat_list_structure.dart';
 import 'package:wostup/utils/navigation/navigation_route_factory.dart';
 
 import '../../utils/contacts/contacts_info_manager.dart';

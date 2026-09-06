@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:wostup/data/contacts/contact_info.dart';
 import 'package:wostup/data/contacts/contacts_info_data.dart';
 import 'package:wostup/utils/files/save_files_helper.dart';
+import 'package:wostup/utils/files/structures/chats/chat_list_structure.dart';
+import 'package:wostup/utils/files/structures/chats/chat_structure.dart';
 import 'package:wostup/utils/files/structures/contacts/contact_list_structure.dart';
 import 'package:wostup/utils/files/structures/contacts/contact_structure.dart';
 
@@ -28,6 +30,11 @@ final class ContactsInfoManager {
         name: name,
         number: number,
         messageCount: 0
+    ));
+
+    ChatListStructure.data.chats.add(ChatStructure(
+        number: number,
+        messages: []
     ));
 
     notifier.value++;
