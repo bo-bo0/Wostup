@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wostup/ui/dialogs/register_user_form.dart';
 
-import '../utils/navigation/navigation_route_factory.dart';
-import 'home_page.dart';
 
 class UserRegistrationPage extends StatelessWidget {
   const UserRegistrationPage({super.key});

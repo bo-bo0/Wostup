@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:wostup/ui/elements/contact_item.dart';
 import 'package:wostup/utils/contacts/contacts_info_manager.dart';
